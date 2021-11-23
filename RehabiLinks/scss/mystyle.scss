@@ -1,0 +1,641 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------------------- */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Sawarabi Gothic", sans-serif;
+  color: black;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+/*----------------------------------------
+ HEADER
+------------------------------------------ */
+.wrapper {
+  margin: 0 auto;
+  padding: 0 4%;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 170px;
+  /*------------------------------------
+  ナビゲーション固定
+  -------------------------------------*/
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  .logo img {
+    width: 300px;
+  }
+  .logo img {
+    display: block;
+    height: auto;
+  }
+  .main-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    li {
+      padding: 0 10px;
+    }
+  }
+  .nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #06c755;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 1.5rem;
+  }
+}
+.main-visual {
+  margin-bottom: 30px;
+  padding-top: 170px;
+  .mv-img {
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #06c755;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px;
+    font-size: 3rem;
+    // width: 720px;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.trouble {
+  background-color: #fff7e2;
+  padding: 20px 0;
+  h2 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    padding: 2rem;
+    align-items: center;
+  }
+  &-text {
+    background-color: #fff;
+    width: 60%;
+    p {
+      padding: 4% 2%;
+      font-size: 2rem;
+    }
+  }
+  &-img {
+    width: 400px;
+    margin: 2%;
+  }
+}
+.problem {
+  background-color: #cff3ce;
+  h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2%;
+  }
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4% 3%;
+    flex-wrap: wrap;
+  }
+  &-box {
+    border: 1px solid black;
+    width: 30%;
+    background-color: #fff;
+  }
+  &-text {
+    padding: 6%;
+    font-size: 2.5rem;
+  }
+}
+.introduction {
+  background-color: #fff7e2;
+  padding-bottom: 4%;
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 4% 2%;
+  }
+  &-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 4% 4%;
+  }
+  &-text {
+    font-size: 1.75rem;
+    width: 50%;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #06c755;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px;
+    font-size: 3rem;
+    // width: 720px;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.comparison {
+  text-align: center;
+  h2 {
+    text-align: center;
+    margin: 64px;
+    font-size: 3rem;
+  }
+  &-table {
+    font-size: 3rem;
+    margin-bottom: 64px;
+  }
+  table {
+    margin: 0 auto;
+  }
+  &-green {
+    background-color: #cff3ce;
+  }
+  th,
+  td {
+    padding: 0 20px;
+  }
+  &-yellow {
+    background-color: #fff7e2;
+  }
+}
+.proposing {
+  background-color: #cff3ce;
+  padding-bottom: 40px;
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2%;
+  }
+  &-text {
+    font-size: 1.75rem;
+    margin: 0 auto;
+    padding: 2% 14%;
+    text-align: justify;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #06c755;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px;
+    font-size: 3rem;
+    // width: 720px;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+footer {
+  margin: 3% 0;
+}
+.footer-logo {
+  width: 440px;
+  margin: 0 auto;
+}
+.footer-p {
+  text-align: center;
+  color: black;
+}
+
+/*--------------------------------------- 
+画面サイズ768px 
+----------------------------------------*/
+@media screen and (max-width: 768px) {
+  .main-nav li:not(:last-child) {
+    display: none;
+  }
+  .menu-trigger {
+    display: none;
+  }
+  .wrapper {
+    padding: 4%;
+    height: 100px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4%;
+    /*--------------------------------------------
+    ヘッダー固定768px
+    ---------------------------------------------*/
+    padding: 2%;
+    .nav-button {
+      font-size: 1rem;
+    }
+  }
+  .main-visual {
+    padding-top: 100px;
+    .button {
+      width: 60%;
+      font-size: 2rem;
+    }
+  }
+  .trouble {
+    h2 {
+      font-size: 2rem;
+    }
+    .trouble-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      .trouble-text {
+        width: 90%;
+      }
+      .trouble-text p {
+        font-size: 1.5rem;
+      }
+      .trouble-img {
+        width: 60%;
+      }
+    }
+  }
+  .problem {
+    h2 {
+      font-size: 1.8rem;
+    }
+    .problem-container {
+      flex-direction: column;
+      .problem-box {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto 2%;
+        .problem-text {
+          font-size: 1.5rem;
+          width: 50%;
+        }
+        .problem-img {
+          width: 40%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .introduction {
+    h2 {
+      font-size: 2rem;
+      padding: 4%;
+    }
+    .introduction-container {
+      flex-direction: column;
+      margin-bottom: 2%;
+      .introduction-img {
+        margin: 0 auto;
+      }
+      .introduction-text {
+        margin: 0 auto;
+        font-size: 1.5rem;
+        padding-top: 2%;
+        width: 80%;
+        text-align: justify;
+      }
+    }
+    .button {
+      width: 60%;
+      font-size: 2rem;
+    }
+  }
+  .comparison {
+    h2 {
+      font-size: 2rem;
+      margin: 4%;
+    }
+    .comparison-table {
+      margin: 4%;
+      font-size: 1.5rem;
+    }
+  }
+  .proposing {
+    padding-bottom: 4%;
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 0%;
+    }
+    .proposing-text {
+      font-size: 1.5rem;
+      width: 90%;
+    }
+    .button {
+      width: 60%;
+      font-size: 2rem;
+    }
+  }
+  .footer-logo {
+    width: 200px;
+  }
+}
+
+/*------------------------------------------------ 
+画面サイズ600px
+------------------------------------------------*/
+@media screen and (max-width: 600px) {
+  // body {
+  //   font-size: 14px;
+  // }
+  .navigation {
+    .logo img {
+      width: 250px;
+    }
+    .nav-button {
+      padding: 8px 16px;
+    }
+  }
+  .main-visual {
+    .button {
+      font-size: 1rem;
+      width: 60%;
+    }
+  }
+  .trouble {
+    h2 {
+      font-size: 1.5rem;
+    }
+    .trouble-container {
+      padding: 0;
+      .trouble-text p {
+        font-size: 1rem;
+      }
+    }
+  }
+  .problem {
+    h2 {
+      font-size: 1.25rem;
+    }
+    .problem-container {
+      .problem-box {
+        width: 90%;
+        .problem-text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .introduction {
+    h2 {
+      font-size: 1.25rem;
+    }
+    .introduction-container {
+      .introduction-img {
+        width: 50%;
+      }
+      .introduction-text {
+        font-size: 1rem;
+      }
+    }
+    .button {
+      font-size: 1rem;
+      width: 60%;
+    }
+  }
+  .comparison {
+    h2 {
+      font-size: 1.25rem;
+    }
+    .comparison-table {
+      font-size: 0.8rem;
+    }
+  }
+  .proposing {
+    h2 {
+      font-size: 1.4rem;
+    }
+    .proposing-text {
+      font-size: 1rem;
+      padding: 4%;
+    }
+    .button {
+      font-size: 1rem;
+      width: 60%;
+    }
+  }
+  .footer-p {
+    font-size: 0.5rem;
+  }
+}
+/*-----------------------------------
+画面サイズ510px/460px
+------------------------------------*/
+@media screen and (max-width: 510px) {
+  .navigation {
+    .logo img {
+      width: 200px;
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .navigation {
+    .logo img {
+      width: 160px;
+    }
+    .nav-button {
+      padding: 8px 10px;
+    }
+  }
+}
+/*-----------------------------------
+画面サイズ400px
+------------------------------------*/
+@media screen and (max-width: 400px) {
+  .navigation {
+    .logo img {
+      width: 120px;
+    }
+    .nav-button {
+      font-size: 0.5rem;
+      padding: 8px 16px;
+    }
+  }
+  .main-visual {
+    .button {
+      font-size: 1rem;
+      width: 60%;
+    }
+  }
+  .trouble {
+    h2 {
+      font-size: 1.5rem;
+    }
+    .trouble-container {
+      padding: 0;
+      .trouble-text p {
+        font-size: 1rem;
+      }
+    }
+  }
+  .problem {
+    h2 {
+      font-size: 1.25rem;
+    }
+    .problem-container {
+      .problem-box {
+        width: 90%;
+        .problem-text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .introduction {
+    h2 {
+      font-size: 1.25rem;
+    }
+    .introduction-container {
+      .introduction-img {
+        width: 50%;
+      }
+      .introduction-text {
+        font-size: 1rem;
+      }
+    }
+    .button {
+      font-size: 1rem;
+      width: 60%;
+    }
+  }
+  .comparison {
+    h2 {
+      font-size: 1.25rem;
+    }
+    .comparison-table {
+      font-size: 0.6rem;
+    }
+  }
+  .proposing {
+    h2 {
+      font-size: 1.3rem;
+    }
+    .proposing-text {
+      font-size: 1rem;
+      padding: 4%;
+    }
+    .button {
+      font-size: 1rem;
+      width: 60%;
+    }
+  }
+  .footer-p {
+    font-size: 0.5rem;
+  }
+}
+/*-------------------------------------------------
+
+ハンバーガーメニュー
+
+-------------------------------------------------*/
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  background: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  z-index: 9999;
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: green;
+  // border-radius: 4 px;
+}
+/*-------------------------------------------------
+クリック後スタイル
+-------------------------------------------------*/
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 14px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+.menu-trigger.active span:nth-of-type(1) {
+  transform: translateY(15px) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+/*-------------------------------------------
+メニュー
+-------------------------------------------*/
+.sp-nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  width: 100%;
+  background: rgba(207, 243, 206, 0.8);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  li,
+  a {
+    padding: 2rem;
+  }
+}
